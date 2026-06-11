@@ -1,4 +1,56 @@
-site_name: My Docs
-site_url: https://mydomain.org/mysite
+site_name: 自主移动机器人使用文档
+# site_name_en: Autonomous Mobile Robot Documentation
+# site_url: https://mydomain.org/mysite
 theme:
   name: material
+
+  features:
+    - navigation.tabs       # 顶部标签栏
+    - navigation.sections   # 左侧菜单显示“分组标题”
+    - navigation.top        # 右下角“回到顶部”按钮
+    - search.suggest        # 搜索联想（输入时自动提示)
+    - search.highlight      # 搜索结果高亮关键词
+
+  language: zh # 默认语言
+
+
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色模式
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色模式
+
+
+
+nav:
+  - 首页: index.zh.md
+  - 开发环境:
+      - 环境准备说明: 00-preparation.zh.md
+      - 安装 Ubuntu: 01-install-ubuntu.zh.md
+      - 安装 ROS 2: 02-install-ros2.zh.md
+      - 安装 VS Code: 03-install-vscode.zh.md
+      - 安装 Python 依赖: 04-install-python-deps.zh.md
+      - 安装 Docker & NVIDIA: 05-install-docker-nvidia.zh.md
+
+
+
+
+extra:
+  generator: false  #页脚显示“MkDocs制造”
+  social:
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/489593500?spm_id_from=333.1007.0.0
+
+
+
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
