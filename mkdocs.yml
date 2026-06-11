@@ -26,39 +26,18 @@ theme:
         name: 切换到亮色模式
 
 
+
 nav:
   - 首页: index.zh.md
+  - 开发环境:
+      - 环境准备说明: 00-preparation.zh.md
+      - 安装 Ubuntu: 01-install-ubuntu.zh.md
+      - 安装 ROS 2: 02-install-ros2.zh.md
+      - 安装 VS Code: 03-install-vscode.zh.md
+      - 安装 Python 依赖: 04-install-python-deps.zh.md
+      - 安装 Docker & NVIDIA: 05-install-docker-nvidia.zh.md
 
-  - 快速上手:
-      - 设备检查与启动: 01-quick-start/01-device-check.md
-      - 连接到机器人: 01-quick-start/02-connect-robot.md
-      - 基本功能检测: 01-quick-start/03-basic-function-test.md
 
-  - 机械结构与传感器:
-      - 整机结构概述: 02-hardware/01-mechanical-overview.md
-      - 运动底盘: 02-hardware/02-mobile-base.md
-      - OMS执行机构: 02-hardware/03-oms-actuator.md
-      - 传感器外设: 02-hardware/04-sensors.md
-
-  - 软件与开发环境:
-      - 环境准备: 03-software/00-preparation.zh.md
-      - 安装 Ubuntu: 03-software/01-install-ubuntu.zh.md
-      - 安装 ROS 2: 03-software/02-install-ros2.zh.md
-      - 安装 VS Code: 03-software/03-install-vscode.zh.md
-      - Python 依赖: 03-software/04-install-python-deps.zh.md
-      - Docker & NVIDIA: 03-software/05-install-docker-nvidia.zh.md
-
-  - 基础教学:
-      - Python 基础: 04-basics/python-basics.md
-      - ROS 2 基础: 04-basics/ros2-basics.md
-
-  - 设备硬件参数适配:
-      - VMXPi Titan 参数: 05-device-params/01-vmxpi-titan-params.md
-      - 底盘运动学参数: 05-device-params/02-chassis-kinematics.md
-      - OMS 电机参数: 05-device-params/03-oms-motor-params.md
-      - Lidar 驱动参数: 05-device-params/04-lidar-driver-params.md
-      - IMU 标定: 05-device-params/05-imu-calibration.md
-      - Wi-Fi 参数: 05-device-params/06-wifi-config.md
 
 
 extra:
