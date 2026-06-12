@@ -63,3 +63,14 @@ sudo dpkg -i /home/xxx/下载/code_1.95.2-1730981514_amd64.deb
 - [ ] 2. 安装Python插件。
 
 ![image-20251028105705273](./images/1006_python.png)
+
+---
+
+## 👥 贡献者
+
+<a href="https://github.com/yxzhc"><img src="https://avatars.githubusercontent.com/u/80094007" width="70"></a>
+
+<br>
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+
+![](../images/61d7f15b093ae.png)

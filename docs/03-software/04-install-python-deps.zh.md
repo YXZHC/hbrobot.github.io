@@ -134,3 +134,14 @@ pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 > 1. 所有命令中 `pip` 可替换为 `pip3`（推荐，避免与 Python2 冲突）；
 > 2. 安装时若提示权限不足，可保留 `sudo` 或添加 `--user` 参数（仅当前用户安装）；
 > 3. 虚拟环境中安装时，无需添加 `sudo`。
+
+---
+
+## 👥 贡献者
+
+<a href="https://github.com/yxzhc"><img src="https://avatars.githubusercontent.com/u/80094007" width="70"></a>
+
+<br>
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+
+![](../images/61d7f15b093ae.png)

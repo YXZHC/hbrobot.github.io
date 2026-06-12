@@ -115,4 +115,14 @@ git config --list
 - 能成功安装 Git
 - 能正确配置用户信息
 - 能使用 Git 完成一次完整的 `clone → modify → commit → push` 流程
-```
+
+---
+
+## 👥 贡献者
+
+<a href="https://github.com/yxzhc"><img src="https://avatars.githubusercontent.com/u/80094007" width="70"></a>
+
+<br>
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+
+![](../images/61d7f15b093ae.png)

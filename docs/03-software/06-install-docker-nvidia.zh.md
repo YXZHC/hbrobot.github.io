@@ -212,3 +212,14 @@ docker cp ultralytics:/tf_code/models/ /home/user/saved_models/
 | Docker 官方安装指南 | https://docs.docker.com/engine/install/ |
 | NVIDIA Container Toolkit 官方文档 | https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html |
 | NVIDIA 显卡驱动下载 | https://www.nvidia.com/download/index.aspx |
+
+---
+
+## 👥 贡献者
+
+<a href="https://github.com/yxzhc"><img src="https://avatars.githubusercontent.com/u/80094007" width="70"></a>
+
+<br>
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+
+![](../images/61d7f15b093ae.png)
