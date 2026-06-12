@@ -3,6 +3,9 @@ site_name: 自主移动机器人使用文档
 # site_url: https://mydomain.org/mysite
 theme:
   name: material
+  favicon: images/szbs.ico          # 网站图标
+  logo: images/61d7f15b093ae.png    # 首页logo
+
   features:
     - navigation.tabs       # 顶部标签栏
     - navigation.sections   # 左侧菜单显示“分组标题”
@@ -12,15 +15,29 @@ theme:
     - content.code.copy     # 代码复制
     
   language: zh # 默认语言
-  palette: 
-    - scheme: default
+
+  palette:
+    # 自动模式的调色板切换
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/weather-night
-        name: 切换到暗色模式
-    - scheme: slate
+        icon: material/brightness-auto
+        name: 切换到明亮模式
+    # 明亮模式的调色板切换
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
       toggle:
-        icon: material/weather-sunny
-        name: 切换到亮色模式
+        icon: material/brightness-7
+        name: 切换到黑暗模式
+    # 黑暗模式的调色板切换
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换到系统偏好
+
+  palette:
+    primary: purple  # 主题颜色
+
 extra:
   generator: false
   social:
