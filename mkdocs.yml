@@ -40,7 +40,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.details      # 启用可折叠
+  - pymdownx.superfences  # 允许块内嵌套代码/表格/列表
   - admonition            # 支持 Material 主题的提示框渲染
   - pymdownx.tasklist:    # 支持 - [ ] 任务列表复选框渲染
       clickable_checkbox: true  # 允许点击复选框（可选）

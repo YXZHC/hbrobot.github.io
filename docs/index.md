@@ -93,7 +93,7 @@
 - 📝 [底盘运动学参数](05-device-params/02-底盘运动学参数.md)
 - 📝 [OMS电机控制参数](05-device-params/03-OMS电机控制参数.md)
 - 📝 [Lidar驱动参数](05-device-params/04-Lidar驱动参数.md)
-- 📝 [IMU水平标定](05-device-params/05-IMU水平标定.md)
+- 🚧 [IMU水平标定](05-device-params/05-IMU水平标定.md)
 - 📝 [无线Wi-Fi参数](05-device-params/06-无线Wi-Fi参数.md)
 
 ---

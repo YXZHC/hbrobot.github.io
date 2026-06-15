@@ -72,6 +72,39 @@ sudo su
 nano /etc/create_ap.conf
 ```
 
+??? example "🔧 默认配置参数示例（`create_ap.conf`）"
+
+    ```ini
+    CHANNEL=default
+    GATEWAY=10.12.34.2
+    WPA_VERSION=2
+    ETC_HOSTS=0
+    DHCP_DNS=gateway
+    NO_DNS=0
+    NO_DNSMASQ=0
+    HIDDEN=0
+    MAC_FILTER=0
+    MAC_FILTER_ACCEPT=/etc/hostapd/hostapd.accept
+    ISOLATE_CLIENTS=0
+    SHARE_METHOD=nat
+    IEEE80211N=0
+    IEEE80211AC=1
+    HT_CAPAB=[HT40+]
+    VHT_CAPAB=
+    DRIVER=nl80211
+    NO_VIRT=0
+    COUNTRY=CN
+    FREQ_BAND=5
+    NEW_MACADDR=
+    DAEMONIZE=0
+    NO_HAVEGED=0
+    WIFI_IFACE=wlan0
+    INTERNET_IFACE=eth0
+    SSID=WSC_ROS2_Robot_HB01
+    PASSPHRASE=hb123456
+    USE_PSK=0
+    ```
+
 在文件中找到以下两行（通常位于文件末尾附近）：
 
 ```ini
@@ -194,3 +227,5 @@ reboot
 本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
 
 ![](../images/61d7f15b093ae.png)
+
+

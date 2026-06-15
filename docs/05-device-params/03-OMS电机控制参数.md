@@ -14,7 +14,85 @@ OMS 电机参数配置文件位于：
 
 > 💡 **提示**：修改参数后需要重启 `oms_motor` 节点或重启机器人方可生效。
 
+
+## 完整配置参数示例
+
+??? example "🔧 oms_motor 配置参数（`param.yaml`）"
+
+    ```yaml
+    motor_names:
+      - rotate_motor
+      - lift_motor
+
+    motor:
+      #举升电机
+      lift_motor:
+        set_topic: '/vmxpi/titan_quad0/set_motor2'
+        feedback_topic: '/vmxpi/titan_quad0/titan/encoder2'
+        limit_sw_topic: '/vmxpi/titan_quad0/limsw2'
+        use_limitsw_h: True   #使用限位H(Titan)
+        invert_enc: False     #反转编码器
+
+        #找原点参数
+        origin_param:
+          offset_tick: -50     #限位脉冲偏移:防止顶死限位时为原点
+          back_vel: -30.0      #找原点速度(rpm)
+          find_cnt: 1         #找原点次数
+          approix_vel: -15.0   #逼近原点速度(rpm)
+          approix_step: -50   #逼近原点步长(脉冲)
+          mode: 0             #找原点模式0:常规单方向 1:双向扫描找原点
+          max_step: 1000      #高速找原点最大脉冲步长
+        
+        #控制参数
+        ctrl_param:
+          #位置环PID参数
+          kp: 0.2
+          ti: 0.0
+          td: 0.0
+          #输出速度滤波器参数
+          max_vel: 100.0      #最大速度rpm
+          max_acc: 600.0      #最大加速度(脉冲/s^2)
+          low_pass: 0.85      #速度低通滤波系数[0,1]
+          ek: 10              #误差因子(脉冲)
+          steady_clk: 5      #稳态周期(1clk=20ms)	
+
+      #旋转电机
+      rotate_motor:
+        set_topic: '/vmxpi/titan_quad0/set_motor3'
+        feedback_topic: '/vmxpi/titan_quad0/titan/encoder3'
+        limit_sw_topic: '/vmxpi/titan_quad0/limsw3'
+        use_limitsw_h: True
+        #限位脉冲偏移:防止顶死限位时为原点
+        origin_offset_tick: 0
+        #反转编码器
+        invert_enc: False
+
+        #找原点参数
+        origin_param:
+          offset_tick: 0      #限位脉冲偏移:防止顶死限位时为原点
+          back_vel: 50.0      #找原点速度(rpm)
+          find_cnt: 1         #找原点次数
+          approix_vel: 35.0    #逼近原点速度(rpm)
+          approix_step: 150   #逼近原点步长(脉冲)
+          mode: 1             #找原点模式0:常规单方向 1:双向扫描找原点
+          max_step: 1500      #高速找原点最大脉冲步长
+        
+        #控制参数
+        ctrl_param:
+          #位置环PID参数
+          kp: 0.28
+          ti: 0.0
+          td: 0.0
+          #输出速度滤波器参数
+          max_vel: 100.0      #最大速度rpm
+          max_acc: 800.0      #最大加速度(脉冲/s^2)
+          low_pass: 0.85      #速度低通滤波系数[0,1]
+          ek: 8               #误差因子(脉冲)
+          steady_clk: 5      #稳态周期(1clk=20ms)
+    ```
+
 ---
+
 
 ## 🧩 参数结构概览
 
