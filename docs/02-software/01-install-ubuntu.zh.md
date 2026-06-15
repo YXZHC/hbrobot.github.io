@@ -213,7 +213,7 @@
             <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
         </a>
         <div style="margin-top: 8px; font-weight: 600;">
-            <a href="https://github.com/其他用户" style="text-decoration: none;">HBRobot</a>
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
         </div>
     </div>
 </div>
