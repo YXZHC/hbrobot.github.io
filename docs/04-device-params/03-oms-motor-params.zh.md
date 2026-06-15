@@ -297,4 +297,4 @@ ros2 topic echo /oms_motor/state
 > 🎯 **下一步**：完成电机参数配置后，可运行 `ros2 run oms_motor oms_node` 并调用 `/oms_motor/go_to_position` 服务进行点位运动测试。
 
 **相关文档**：
-- [Titan 驱动器参数配置](01-VMXPi_Titan参数.md)
+- [Titan 驱动器参数配置](01-vmxpi-titan-params.zh.md)

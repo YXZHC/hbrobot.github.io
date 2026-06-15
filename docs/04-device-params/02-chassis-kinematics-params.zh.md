@@ -607,4 +607,4 @@ chassis_config = os.path.join(
 ---
 
 **📚 相关文档**：
-- [VMX_Pi / Titan 设备参数配置](01-VMXPi_Titan参数.md)
+- [VMX_Pi / Titan 设备参数配置](01-vmxpi-titan-params.zh.md)

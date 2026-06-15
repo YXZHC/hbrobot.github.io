@@ -22,113 +22,118 @@
 ---
 > *点击章节标题可直接跳转至对应详细文档。*
 
-### 🚀 [01-快速上手](01-quick-start/01-设备检查与启动.md)
+### 🚀 [01-快速上手](01-quick-start/01-device-check-and-boot.zh.md)
 
 开箱验收、充电规范、开关机流程、急停操作，零基础快速启动机器人。
 
-- 📝 [设备检查与启动](01-quick-start/01-设备检查与启动.md)
-- ✅ [连接到机器人](01-quick-start/02-连接到机器人.md) 
-- ✅ [基本功能检测](01-quick-start/03-基本功能检测.md) （SSH、急停、电池电压、按键指示灯）
-- 🚧 [本地开发调试](01-quick-start/04-本地开发调试.md)
+- 📝 [设备检查与启动](01-quick-start/01-device-check-and-boot.zh.md)
+- ✅ [连接到机器人](01-quick-start/02-connect-to-robot.zh.md) 
+- ✅ [基本功能检测](01-quick-start/03-basic-function-test.zh.md) 
+- 🚧 [本地开发调试](01-quick-start/04-local-dev-debug.zh.md)
 
 ---
 
-### 🛠️ [02-硬件介绍](02-hardware/01-整机结构概述.md)
+### 💻 [02-开发环境配置](02-software/00-preparation.zh.md)
 
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
 
-整机结构拆解、运动底盘、OMS执行机构、传感器外设（激光雷达、视觉相机、IMU等）。
-
-- 🚧 [整机结构概述](02-hardware/01-整机结构概述.md)
-- 🚧 [运动底盘](02-hardware/02-运动底盘.md)
-- 🚧 [OMS执行机构](02-hardware/03-OMS执行机构.md)
-- 🚧 [传感器外设](02-hardware/04-传感器外设.md)
-
----
-
-### 💻 [03-软件与开发环境](03-software/00-preparation.zh.md)
-
-车载系统架构、ROS/ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
-
-- ✅ [准备工作](03-software/00-preparation.zh.md)   
-- ✅ [安装 Ubuntu](03-software/01-install-ubuntu.zh.md) 
-- ✅ [安装 ROS2](03-software/02-install-ros2.zh.md) 
-- ✅ [安装 VS Code](03-software/03-install-vscode.zh.md) 
-- ✅ [安装 Python 依赖](03-software/04-install-python-deps.zh.md) 
-- ✅ [安装 NVIDIA 驱动](03-software/05-install-nvidia-driver.zh.md) 
-- ✅ [安装 Docker + NVIDIA Container](03-software/06-install-docker-nvidia.zh.md) 
-- ✅ [安装 Git](03-software/08-install-git.zh.md)
+- ✅ [环境准备](02-software/00-preparation.zh.md)   
+- ✅ [安装 Ubuntu](02-software/01-install-ubuntu.zh.md) 
+- ✅ [安装 ROS 2](02-software/02-install-ros2.zh.md) 
+- ✅ [安装 VS Code](02-software/03-install-vscode.zh.md) 
+- ✅ [Python 依赖](02-software/04-install-python-deps.zh.md) 
+- ✅ [NVIDIA 显卡驱动](02-software/05-install-nvidia-driver.zh.md) 
+- ✅ [Docker 与 NVIDIA](02-software/06-install-docker-nvidia.zh.md) 
+- ✅ [安装与配置 Git](02-software/08-install-git.zh.md)
 
 ---
 
-### 🎮 [04-基础操控](04-basics/ROS2/00-ROS2.zh.md)
+### 🛠️ [03-硬件与结构](03-hardware/01-robot-overview.zh.md)
 
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+整机结构解析、运动底盘、OMS执行机构、传感器外设（激光雷达、视觉相机、IMU等）。
 
-键盘、手柄手动遥控，程序启停，设备指示灯状态解读，以及 ROS2 和 Python 基础。
-
-#### **ROS2 基础**
-
-- 🚧 [ROS2 快速了解](04-basics/ROS2/00-ROS2.zh.md)
-- 🚧 [Topic](04-basics/ROS2/01-ROS2-Topic.zh.md)
-- 🚧 [Service](04-basics/ROS2/02-ROS2-Service.zh.md)
-- 🚧 [Action](04-basics/ROS2/03-ROS2-Action.zh.md)
-- 🚧 [Launch](04-basics/ROS2/04-ROS2-Launch.zh.md)
-- 🚧 [Parameter](04-basics/ROS2/05-ROS2-Parameter.zh.md)
-
-
-#### **Python 基础**
-
-- 🚧 [Python 快速入门](04-basics/Python/1-python.md)
+- 🚧 [整机结构概述](03-hardware/01-robot-overview.zh.md)
+- 🚧 [运动底盘](03-hardware/02-motion-chassis.zh.md)
+- 🚧 [OMS 执行机构](03-hardware/03-oms-actuator.zh.md)
+- 🚧 [传感器外设](03-hardware/04-sensor-peripherals.zh.md)
 
 ---
 
-### ⚙️ [05-设备参数](05-device-params/01-VMXPi_Titan参数.md)
-
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+### ⚙️ [04-参数配置与标定](04-device-params/01-vmxpi-titan-params.zh.md)
 
 主控参数、底盘运动学、电机控制参数、激光雷达驱动、IMU标定及无线Wi-Fi配置。
 
-- 📝 [VMXPi_Titan 参数](05-device-params/01-VMXPi_Titan参数.md)
-- 📝 [底盘运动学参数](05-device-params/02-底盘运动学参数.md)
-- 📝 [OMS电机控制参数](05-device-params/03-OMS电机控制参数.md)
-- 📝 [Lidar驱动参数](05-device-params/04-Lidar驱动参数.md)
-- 🚧 [IMU水平标定](05-device-params/05-IMU水平标定.md)
-- 📝 [无线Wi-Fi参数](05-device-params/06-无线Wi-Fi参数.md)
+- ✅ [VMXPi & Titan 参数](04-device-params/01-vmxpi-titan-params.zh.md)
+- ✅ [底盘运动学参数](04-device-params/02-chassis-kinematics-params.zh.md)
+- ✅ [OMS 电机参数](04-device-params/03-oms-motor-params.zh.md)
+- 📝 [激光雷达参数](04-device-params/04-lidar-driver-params.zh.md)
+- 🚧 [IMU 水平标定](04-device-params/05-imu-calibration.zh.md)
+- ✅ [无线网络参数](04-device-params/06-wifi-params.zh.md)
 
 ---
 
-### 🗺️ 06-自主导航功能
+### 🎮 [05-基础教学](05-basics/ros2/00-ros2-overview.zh.md)
 
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+ROS2 和 Python 基础。
 
-SLAM 建图、地图存储加载、路径规划、动态避障、导航点位设定实操步骤。
+#### **ROS 2 基础**
+- 🚧 [ROS 2 概述](05-basics/ros2/00-ros2-overview.zh.md)
+- 🚧 [话题 (Topic)](05-basics/ros2/01-topic.zh.md)
+- 🚧 [服务 (Service)](05-basics/ros2/02-service.zh.md)
+- 🚧 [动作 (Action)](05-basics/ros2/03-action.zh.md)
+- 🚧 [启动文件 (Launch)](05-basics/ros2/04-launch.zh.md)
+- 🚧 [参数 (Parameter)](05-basics/ros2/05-parameter.zh.md)
+
+#### **Python 基础**
+- 🚧 [Python 基础](05-basics/python/01-python.zh.md)
 
 ---
 
-### 🔒 07-安全规范
+### 🤖 [06-控制与应用](06-applications/01-actuator-control/01-user-servo-params.zh.md)
 
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+执行机构控制、底盘运动控制、传感器与视觉应用及综合任务实战。
 
-场地使用要求、安全操作距离、故障紧急处置方案，规避设备与人身风险。
+#### **执行机构控制**
+- 🚧 [用户伺服舵机参数](06-applications/01-actuator-control/01-user-servo-params.zh.md)
+- 🚧 [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
+- 🚧 [用户举升与旋转参数](06-applications/01-actuator-control/03-user-lift-rotate-params.zh.md)
+- 🚧 [举升与旋转控制](06-applications/01-actuator-control/04-lift-rotate-control.zh.md)
 
-> 📌 详细内容请参考各操作章节中的「安全注意事项」小节。
+#### **底盘运动控制**
+- 🚧 [基础底盘速度控制](06-applications/02-chassis-control/01-basic-velocity-control.zh.md)
+- 🚧 [基础直行与旋转控制](06-applications/02-chassis-control/02-straight-rotate-control.zh.md)
+- 🚧 [连续轨迹运动控制](06-applications/02-chassis-control/03-trajectory-control.zh.md)
+
+#### **传感器应用**
+- 🚧 [测距传感器合集](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
+- 🚧 [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
+- 🚧 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
+
+#### **视觉应用**
+- 🚧 [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
+- 🚧 [目标识别基础](06-applications/04-vision-application/02-object-detection-basics.zh.md)
+- 🚧 [深度学习目标检测](06-applications/04-vision-application/03-deep-learning-detection.zh.md)
+
+#### **综合任务实战**
+- 🚧 [视觉追踪与抓取](06-applications/05-integration-tasks/01-visual-tracking-grasp.zh.md)
+- 🚧 [多模块联动示例](06-applications/05-integration-tasks/02-multi-module-task.zh.md)
 
 ---
 
-### ❓ 08-附录 FAQ
+### 🚀 [07-进阶内容](07-advanced/01-udev-rule.zh.md)
 
-> ⚠️ 该板块内容正在准备中，敬请期待后续更新。
+UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航。
 
-通信连接失败、导航漂移、传感器无数据、程序闪退等高频问题排查方案。
-
-> 📌 FAQ 内容会随用户反馈持续更新，建议查看在线最新版本。
+- 🚧 [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
+- 🚧 [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
+- 🚧 [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
+- 🚧 [激光定位与导航](07-advanced/04-lidar-localization-navigation.zh.md)
 
 ---
 
 ## 📚 使用建议
 
-- **初次使用** 👶：请严格按照「[01-快速上手](01-quick-start/01-设备检查与启动.md)」章节顺序操作，切勿跳过安全检查步骤。
+- **初次使用** 👶：请严格按照「[01-快速上手](01-quick-start/01-device-check-and-boot.zh.md)」章节顺序操作，切勿跳过安全检查步骤。
 - **课程实验** 🧪：可按需截取对应章节打印或导出 PDF 作为实验指导书。
 - **协作修订** 🤝：文档支持多人协作修改，可 Fork 仓库提交修订建议。
 - **快速导航** 🔍：使用文档顶部的搜索功能（MkDocs 支持）或左侧目录树跳转。
@@ -147,3 +152,29 @@ SLAM 建图、地图存储加载、路径规划、动态避障、导航点位设
 ---
 
 > 📌 **提示**：本文档中所有相对链接均基于 MkDocs 站点根目录，若在本地查看请确保文件路径与目录结构一致。
+
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/其他用户" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
