@@ -140,8 +140,39 @@ if __name__ == '__main__':
     - **理解**：`tick` 在电机控制中通常指编码器的脉冲数。`tick/s^2` 是以脉冲为基准的角加速度/线加速度单位。实际物理加速度（如 $m/s^2$）需要结合丝杠导程或减速比进行换算。
     - **调参建议**：在应用层，不要一上来就设很大！建议先以较小的数值（如 1000）为起点测试，逐步增大直至运动响应既平滑又迅速。
 
-## 🔗 参考
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
 
-- [用户举升与旋转参数配置](03-user-lift-rotate-params.zh.md)
-- [伺服舵机控制](02-servo-control.zh.md)
-- 下一节：[基础底盘速度控制](../02-chassis-control/01-basic-velocity-control.zh.md)
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
+
+---
+
+!!! tip "🔗 本节导航"
+
+    <p style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <span>⬅️ <strong>上一节</strong><br><a href="../03-user-lift-rotate-params.zh">用户举升与旋转参数配置</a></span>
+        <span>📑 <strong>上级目录</strong><br><a href="../02-servo-control.zh">servo-control</a></span>
+        <span>➡️ <strong>下一节</strong><br><a href="../../02-chassis-control/01-basic-velocity-control.zh">基础底盘速度控制</a></span>
+    </p>

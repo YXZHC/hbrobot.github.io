@@ -226,6 +226,34 @@ if __name__ == '__main__':
 ???+ warning "常见问题：`back=False` 参数的作用是什么？ 🔙"
     - 在 PTP 和差速跟随中，`back` 参数决定了机器人在面对“需要后退才能到达的路径”时的行为。若设为 `False`，机器人会自动先旋转车身至前进方向，再正向驶向目标；若设为 `True`，则允许机器人倒车行驶至后方目标点。
 
+
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
+
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
+
 ---
 
 !!! tip "🔗 本节导航"

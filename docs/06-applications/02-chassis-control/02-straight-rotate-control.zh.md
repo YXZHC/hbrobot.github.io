@@ -143,12 +143,40 @@ if __name__ == '__main__':
 ???+ warning "常见问题：如何安全地中断正在执行的旋转/直行？"
     如果在运动过程中遇到障碍物或突发情况，不能仅仅依赖 `wait_finished()`。此时应该使用 `cancel()` 方法。它会立即将底盘速度目标置零并中断当前的运动规划，是保障机器人安全的重要手段 🛑。
 
-## 🔗 参考
 
-- [连续轨迹运动控制](03-trajectory-control.zh.md) (基于世界坐标的绝对运动)
-- [基础底盘速度控制](01-basic-velocity-control.zh.md)
-- 上一节：[举升与旋转控制](../01-actuator-control/04-lift-rotate-control.zh.md)
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
 
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
 
-<hr class="doc-separator">
+---
 
+!!! tip "🔗 本节导航"
+
+    <p style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <span>⬅️ <strong>上一节</strong><br><a href="../01-basic-velocity-control.zh">基础底盘速度控制</a></span>
+        <span>📑 <strong>上级目录</strong><br><a href="../../01-actuator-control/04-lift-rotate-control.zh">举升与旋转控制</a></span>
+        <span>➡️ <strong>下一节</strong><br><a href="../03-trajectory-control.zh">连续轨迹运动控制</a></span>
+    </p>

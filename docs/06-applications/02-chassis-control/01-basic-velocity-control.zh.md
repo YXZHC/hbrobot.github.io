@@ -120,8 +120,40 @@ if __name__ == '__main__':
     - **排查1** 🔄：检查电机接线顺序。若左右轮电机线接反，会导致左右轮旋转逻辑反转，造成严重的控制混乱。
     - **排查2** 📐：确认坐标系方向。部分底盘驱动板底层的坐标系定义可能与上层 SDK 不一致，需在底层驱动或参数配置中修正 `axis_direction`。
 
-## 🔗 参考
 
-- [基础直行与旋转控制](02-straight-rotate-control.zh.md)
-- [连续轨迹运动控制](03-trajectory-control.zh.md)
-- 上一节：[举升与旋转控制](../01-actuator-control/04-lift-rotate-control.zh.md)
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
+
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
+
+---
+
+!!! tip "🔗 本节导航"
+
+    <p style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <span>⬅️ <strong>上一节</strong><br><a href="../../01-actuator-control/04-lift-rotate-control.zh">举升与旋转控制</a></span>
+        <span>📑 <strong>上级目录</strong><br><a href="../../01-actuator-control/03-user-lift-rotate-params.zh">用户举升与旋转参数配置</a></span>
+        <span>➡️ <strong>下一节</strong><br><a href="../02-straight-rotate-control.zh">基础直行与旋转控制</a></span>
+    </p>
