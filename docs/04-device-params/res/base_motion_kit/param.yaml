@@ -1,0 +1,117 @@
+topic_odom: '/chassis/odom/user'      # odom topic
+topic_cmd_vel: '/chassis/cmd_vel'     # 线速度 topic 
+topic_emg: '/chassis/emg_status'      # 紧急停止状态 topic
+
+# |-------------> [PTP 控制器参数] <-------------|
+ptp:
+  #直线运动默认参数
+  line_param:
+    pid_param: [2.1, 0.0, 0.0]
+    max_vel: 0.67               # 最大速度m/s
+    max_acc: 1.34               # 最大加速度
+    low_pass: 1.0               # 低通平滑系数[0,1]
+    ek: 0.007                   # 误差阈值m
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms
+
+  #旋转运动默认参数:直线运动过程中使用
+  roate_param_move:
+    pid_param: [2.8, 0.0, 0.0]
+    max_vel: 4.2                # 最大速度rad/s
+    max_acc: 8.4                # 最大加速度
+    low_pass: 1.00              # 低通平滑系数[0,1]
+    ek: 0.010                   # 误差阈值rad  0.008726389 = 0.5deg
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms
+
+  #旋转运动默认参数:初始对准及旋转到位使用
+  roate_param:
+    pid_param: [3.2, 0.0, 0.0]
+    max_vel: 4.2                # 最大速度rad/s
+    max_acc: 8.4                # 最大加速度
+    low_pass: 0.95              # 低通平滑系数[0,1]
+    ek: 0.010                   # 误差阈值rad  0.008726389 = 0.5deg
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms  ***
+
+
+# |-------------> [差速追踪参数] <-------------|
+follow:
+  # 路径跟踪参数
+  pursuit_param:
+    L: 0.1                      # 轴距m
+    ek: 0.01                    # 误差跟踪结束m
+
+    #自适应前瞻距离参数 ld = kv *v + ld0
+    ld0: 0.15                   # 预瞄距离最小值m
+    kv: 0.1                     # 速度比例系数 kv *v
+    ld_max: 0.5                 # 最大预瞄距离m
+
+  #直线运动默认参数
+  line_param:
+    pid_param: [2.1, 0.0, 0.0]
+    max_vel: 0.67               # 最大速度m/s
+    max_acc: 1.072              # 最大加速度
+    low_pass: 0.9               # 低通平滑系数[0,1]
+    ek: 0.015                   # 误差阈值m
+    steady_clk: 5               # 误差跳出稳定周期1clk=20ms
+
+  #旋转运动默认参数:跟踪时旋转控制使用
+  roate_param:
+    pid_param: [3.2, 0.0, 0.0]
+    max_vel: 4.2                # 最大速度rad/s
+    max_acc: 8.4                # 最大加速度
+    low_pass: 0.8               # 低通平滑系数[0,1]
+    ek: 0.017                   # 误差阈值rad  0.008726389 = 0.5deg
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms
+
+  #旋转运动默认参数:初始对准及旋转到位使用
+  roate_planner_param:
+    pid_param: [3.1, 0.0, 0.0]
+    max_vel: 4.2                # 最大速度rad/s
+    max_acc: 8.4                # 最大加速度
+    low_pass: 0.95              # 低通平滑系数[0,1]
+    ek: 0.017                   # 误差阈值rad  0.008726389 = 0.5deg
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms  ***
+
+  init_heading_thres: 0.174     # 初始对准航向误差阈值(rad),大于该阈值先执行旋转对准航向
+  kv_heading: 1.6               # 转弯时线速度减速系数(min=1), 调大时航向角偏差越大,线速度减速越大.
+  low_pass_heading: 1.0         # 航向角低通滤波系数[0,1]
+
+
+# |-------------> [基础运动参数] <-------------|
+base_motion:
+  # 直线运动默认参数
+  line_param:
+    pid_param: [2.3, 0.0, 0.0]
+    max_vel: 0.67               # 最大速度m/s
+    max_acc: 1.34               # 最大加速度
+    low_pass: 0.9               # 低通平滑系数[0,1]
+    ek: 0.01                    # 误差阈值m
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms ***
+
+  # 旋转运动默认参数
+  rotate_param:
+    pid_param: [2.6, 0.0, 0.0]
+    max_vel: 240.0              # 最大速度deg/s
+    max_acc: 480.0              # 最大加速度
+    low_pass: 0.9               # 低通平滑系数[0,1]
+    ek: 1.0                     # 误差阈值deg  
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms ***
+
+# |-------------> [连续运动驱动器 (全向轮)] <-------------|
+path_driver_3wd:
+  #直线运动默认参数
+  line_param:
+    pid_param: [3.1, 0.0, 0.0]
+    max_vel: 0.67               # 最大速度m/s
+    max_acc: 1.34               # 最大加速度
+    low_pass: 1.0               # 低通平滑系数[0,1]
+    ek: 0.003                   # 误差阈值m
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms
+
+  #旋转运动默认参数
+  roate_param:
+    pid_param: [3.2, 0.0, 0.0]
+    max_vel: 3.28               # 最大速度rad/s
+    max_acc: 6.56               # 最大加速度
+    low_pass: 0.95              # 低通平滑系数[0,1]
+    ek: 0.0043633               # 误差阈值rad  0.008726389 = 0.5deg
+    steady_clk: 10              # 误差跳出稳定周期1clk=20ms  ***

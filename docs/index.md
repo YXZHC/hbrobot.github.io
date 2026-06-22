@@ -69,7 +69,7 @@ ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
 - 📝 [激光雷达参数](04-device-params/04-lidar-driver-params.zh.md)
 - 🚧 [IMU 水平标定](04-device-params/05-imu-calibration.zh.md)
 - ✅ [无线网络参数](04-device-params/06-wifi-params.zh.md)
-
+- 📝 [路径驱动套件参数](04-device-params/07-path-driver-kit-params.zh.md)
 ---
 
 ### 🎮 [05-基础教学](05-basics/ros2/00-ros2-overview.zh.md)
