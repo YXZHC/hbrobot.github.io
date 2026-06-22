@@ -95,7 +95,7 @@ ROS2 和 Python 基础。
 
 #### **执行机构控制**
 - ✅ [用户伺服舵机参数](06-applications/01-actuator-control/01-user-servo-params.zh.md)
-- 📝 [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
+- ✅ [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
 - 📝 [用户举升与旋转参数](06-applications/01-actuator-control/03-user-lift-rotate-params.zh.md)
 - ✅ [举升与旋转控制](06-applications/01-actuator-control/04-lift-rotate-control.zh.md)
 
