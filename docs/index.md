@@ -26,10 +26,10 @@
 
 开箱验收、充电规范、开关机流程、急停操作，零基础快速启动机器人。
 
-- 🚧 [设备检查与启动](01-quick-start/01-device-check-and-boot.zh.md)
+- 📝 [设备检查与启动](01-quick-start/01-device-check-and-boot.zh.md)
 - ✅ [连接到机器人](01-quick-start/02-connect-to-robot.zh.md) 
 - ✅ [基本功能检测](01-quick-start/03-basic-function-test.zh.md) 
-- 📝 [本地开发调试](01-quick-start/04-local-dev-debug.zh.md)
+- ✅ [本地开发调试](01-quick-start/04-local-dev-debug.zh.md)
 
 ---
 
@@ -95,7 +95,7 @@ ROS2 和 Python 基础。
 
 #### **执行机构控制**
 - ✅ [用户伺服舵机参数](06-applications/01-actuator-control/01-user-servo-params.zh.md)
-- 📝 [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
+- ✅ [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
 - 📝 [用户举升与旋转参数](06-applications/01-actuator-control/03-user-lift-rotate-params.zh.md)
 - ✅ [举升与旋转控制](06-applications/01-actuator-control/04-lift-rotate-control.zh.md)
 
