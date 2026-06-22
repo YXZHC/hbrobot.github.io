@@ -26,10 +26,10 @@
 
 开箱验收、充电规范、开关机流程、急停操作，零基础快速启动机器人。
 
-- 📝 [设备检查与启动](01-quick-start/01-device-check-and-boot.zh.md)
+- 🚧 [设备检查与启动](01-quick-start/01-device-check-and-boot.zh.md)
 - ✅ [连接到机器人](01-quick-start/02-connect-to-robot.zh.md) 
 - ✅ [基本功能检测](01-quick-start/03-basic-function-test.zh.md) 
-- 🚧 [本地开发调试](01-quick-start/04-local-dev-debug.zh.md)
+- 📝 [本地开发调试](01-quick-start/04-local-dev-debug.zh.md)
 
 ---
 
@@ -94,15 +94,15 @@ ROS2 和 Python 基础。
 执行机构控制、底盘运动控制、传感器与视觉应用及综合任务实战。
 
 #### **执行机构控制**
-- 🚧 [用户伺服舵机参数](06-applications/01-actuator-control/01-user-servo-params.zh.md)
-- 🚧 [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
-- 🚧 [用户举升与旋转参数](06-applications/01-actuator-control/03-user-lift-rotate-params.zh.md)
-- 📝 [举升与旋转控制](06-applications/01-actuator-control/04-lift-rotate-control.zh.md)
+- ✅ [用户伺服舵机参数](06-applications/01-actuator-control/01-user-servo-params.zh.md)
+- 📝 [伺服舵机控制](06-applications/01-actuator-control/02-servo-control.zh.md)
+- 📝 [用户举升与旋转参数](06-applications/01-actuator-control/03-user-lift-rotate-params.zh.md)
+- ✅ [举升与旋转控制](06-applications/01-actuator-control/04-lift-rotate-control.zh.md)
 
 #### **底盘运动控制**
-- 📝 [基础底盘速度控制](06-applications/02-chassis-control/01-basic-velocity-control.zh.md)
-- 📝 [基础直行与旋转控制](06-applications/02-chassis-control/02-straight-rotate-control.zh.md)
-- 📝 [连续轨迹运动控制](06-applications/02-chassis-control/03-trajectory-control.zh.md)
+- ✅ [基础底盘速度控制](06-applications/02-chassis-control/01-basic-velocity-control.zh.md)
+- ✅ [基础直行与旋转控制](06-applications/02-chassis-control/02-straight-rotate-control.zh.md)
+- ✅ [连续轨迹运动控制](06-applications/02-chassis-control/03-trajectory-control.zh.md)
 
 #### **传感器应用**
 - 🚧 [测距传感器合集](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
