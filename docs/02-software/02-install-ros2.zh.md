@@ -72,10 +72,9 @@ wget http://fishros.com/install -O fishros && . fishros
     ```bash
     source /opt/ros/humble/setup.bash
     ```
-    
-    
 
 - **安装中途网络异常**
+
   - 重新执行一键安装脚本
   - 优先选择中科大或清华镜像源
 
