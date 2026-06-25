@@ -51,6 +51,12 @@ markdown_extensions:
       
   - attr_list
 
+  - pymdownx.arithmatex:
+      generic: true  # 兼容 $$、$、\[ \] 公式标记
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 # 仓库链接
 repo_url: https://github.com/hbrobot/hbrobot.github.io.git
 repo_name: hbrobot/hbrobot.github.io
@@ -147,3 +153,6 @@ nav:
     - 激光雷达 SDK 安装: 07-advanced/02-lidar-sdk-install.zh.md
     - 激光雷达 ROS2 驱动: 07-advanced/03-lidar-ros2-driver.zh.md
     - 激光定位与导航: 07-advanced/04-lidar-localization-navigation.zh.md
+    - COCO数据集采集与标注: 07-advanced/05-coco-dataset-collect-label.zh.md
+    - YOLO模型训练与导出: 07-advanced/06-yolo-train-export.zh.md
+    - MNN模型部署与应用: 07-advanced/07-mnn-model-deploy.zh.md
