@@ -16,6 +16,7 @@ theme:
     - search.suggest        # 搜索联想（输入时自动提示)
     - search.highlight      # 搜索结果高亮关键词
     - content.code.copy     # 代码复制
+    - navigation.footer     # 底部显示上/下页按钮
     
   language: zh # 默认语言
 

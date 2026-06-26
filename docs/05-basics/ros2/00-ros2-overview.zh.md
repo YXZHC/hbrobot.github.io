@@ -16,7 +16,7 @@
 ## 🚀 接下来您可以
 
 <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <a href="../index.md" class="md-button md-button--primary">
+    <a href="../../../" class="md-button md-button--primary">
         🏠 返回首页
     </a>
     <a href="https://github.com/hbrobot/hbrobot.github.io/issues/new/choose" class="md-button">
