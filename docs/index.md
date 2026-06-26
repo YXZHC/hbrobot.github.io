@@ -67,7 +67,7 @@ ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
 - ✅ [底盘运动学参数](04-device-params/02-chassis-kinematics-params.zh.md)
 - ✅ [OMS 电机参数](04-device-params/03-oms-motor-params.zh.md)
 - 📝 [激光雷达参数](04-device-params/04-lidar-driver-params.zh.md)
-- 📝 [IMU 水平标定](04-device-params/05-imu-calibration.zh.md)
+- ✅ [IMU 水平标定](04-device-params/05-imu-calibration.zh.md)
 - ✅ [无线网络参数](04-device-params/06-wifi-params.zh.md)
 - ✅ [路径驱动套件参数](04-device-params/07-path-driver-kit-params.zh.md)
 ---
@@ -110,7 +110,7 @@ ROS2 和 Python 基础。
 - 🚧 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
 
 #### **视觉应用**
-- 🚧 [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
+- 📝 [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
 - 🚧 [目标识别基础](06-applications/04-vision-application/02-object-detection-basics.zh.md)
 - 🚧 [深度学习目标检测](06-applications/04-vision-application/03-deep-learning-detection.zh.md)
 
