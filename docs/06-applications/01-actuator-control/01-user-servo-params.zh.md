@@ -210,13 +210,3 @@ if __name__ == '__main__':
 
 [:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
 [:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
-
----
-
-!!! tip "🔗 本节导航"
-
-    <p style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-        <span>⬅️ <strong>上一节</strong><br><a href="../00-hardware-overview.zh">硬件概览与组装</a></span>
-        <span>📑 <strong>上级目录</strong><br><a href="../02-servo-control.zh">servo-control</a></span>
-        <span>➡️ <strong>下一节</strong><br><a href="../02-servo-control.zh">舵机控制教程</a></span>
-    </p>

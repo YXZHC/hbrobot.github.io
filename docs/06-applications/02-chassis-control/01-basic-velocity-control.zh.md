@@ -147,13 +147,3 @@ if __name__ == '__main__':
 
 [:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
 [:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
-
----
-
-!!! tip "🔗 本节导航"
-
-    <p style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-        <span>⬅️ <strong>上一节</strong><br><a href="../../01-actuator-control/04-lift-rotate-control.zh">举升与旋转控制</a></span>
-        <span>📑 <strong>上级目录</strong><br><a href="../../01-actuator-control/03-user-lift-rotate-params.zh">用户举升与旋转参数配置</a></span>
-        <span>➡️ <strong>下一节</strong><br><a href="../02-straight-rotate-control.zh">基础直行与旋转控制</a></span>
-    </p>
