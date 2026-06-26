@@ -1,50 +1,196 @@
-# 🏗️ 正在紧张筹备中
+# IMU 水平标定
 
-<div style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
-    <div style="font-size: 80px; line-height: 1.2; margin-bottom: 20px;">
-        ⚙️🚧⏳
+> 本文档对应世界技能大赛自主移动机器人系列教程中 **设备参数配置** 模块的 **IMU 水平标定** 章节。
+
+## 📌 概述
+
+惯性测量单元（IMU，Inertial Measurement Unit）是自主移动机器人实现姿态感知、方向判断和运动控制的核心传感器。VMX-pi 开发板集成的 IMU 包含**三轴加速度计**和**三轴陀螺仪**，能够实时测量机器人的加速度和角速度信息。
+
+然而，传感器在出厂后受温度变化、机械安装误差、环境因素等影响，其测量值会存在偏差。**IMU 水平标定**的目的正是消除这些偏差，确保传感器输出数据的准确性和可靠性。
+
+> ⚠️ **重要提示**：成功的 IMU 标定对于获得有效的偏航角（Yaw Angle）至关重要。虽然 VMX-pi 的标定过程大部分是自动完成的，但理解其工作原理是获得最佳效果的必要前提。
+
+---
+
+## 🔄 标定流程概述
+
+VMX-pi 的 IMU 标定过程由**三个阶段**组成：
+
+| 阶段 | 触发时机 | 说明 |
+|------|----------|------|
+| **工厂标定** | 出厂前/手动触发 | 初始标定数据写入闪存 |
+| **启动标定** | 每次上电 | 基于当前温度条件自动校准 |
+| **动态标定** | 运行期间 | 持续补偿温度漂移 |
+
+---
+
+## 🏭 工厂标定（Factory Calibration）
+
+### 原理说明
+
+VMX-pi 在出厂前，加速度计和陀螺仪已由 Kauai Labs 工厂完成初始标定。标定数据存储在闪存（Flash Memory）中，每次 navX-Micro 电路板上电时自动加载并应用于传感器数据。
+
+### 温度敏感性
+
+板载陀螺仪对温度变化非常敏感。工厂位于夏威夷考艾岛，平均环境温度可能与您的实际工作环境存在差异。因此，**当机器人进入新的温度环境时，建议重新执行工厂标定**。
+
+### 手动重新标定步骤
+
+如需重新执行工厂标定，请按以下步骤操作：
+
+1. **长按「CAL」按钮**：持续按住至少 **10 秒**。
+2. **确认指示灯**：松开「CAL」按钮后，确保「CAL」LED 短暂闪烁。
+3. **重启模块**：按下「RESET」按钮重启 navX-Micro。
+4. **等待初始化标定**：重启后 VMX-pi 将执行初始陀螺仪标定。
+
+> 🔴 **关键要求**：在初始陀螺仪标定期间，**必须保持 VMX-pi 完全静止**，且**平行于地球表面**。
+
+### 适用场景
+
+- ✅ 机器人首次在**新环境**中使用前（如抵达比赛场地时）
+- ✅ 环境温度与工厂温度**差异显著**时
+- ✅ 偏航角精度明显下降时
+
+### 重新标定的收益
+
+在与运行温度相同的环境下重新执行工厂标定，可以：
+
+- 📈 提升偏航角精度
+- ⚡ 缩短启动标定时间
+
+> 💡 **注意**：如果自上次工厂标定后发生了显著的温度变化，启动标定时间可能比正常情况更长，且在下次动态陀螺仪标定完成之前，偏航角精度可能会受到影响。
+
+---
+
+## 🚀 启动标定（Startup Calibration）
+
+### 原理说明
+
+每次 VMX-pi 上电时都会自动执行启动标定。该过程以工厂标定数据为起点，根据**当前温度条件**对加速度计和陀螺仪标定数据进行调整。
+
+### 执行要求
+
+启动标定要求传感器**保持静止**才能成功完成。
+
+### 失败后果
+
+如果传感器在启动标定期间持续移动：
+
+- ⏱️ 启动标定将**超时**（Timeout）
+- 📉 VMX-pi 的偏航角精度可能**达不到预期**
+
+---
+
+## 🎯 初始偏航偏移标定（Initial Yaw Offset Calibration）
+
+### 原理说明
+
+启动标定完成后，VMX-pi 会自动计算**初始偏航偏移量**（Initial Yaw Offset）。
+
+该偏移量的作用是：**将启动时（初始标定应用后）VMX-pi 电路板「正面」所指的方向定义为「0 度」**。
+
+### 执行要求
+
+初始偏航偏移标定要求 VMX-pi 在启动标定完成后**保持静止约 2 秒**。
+
+### 工作机制
+
+经过约 2 秒的静止后，VMX-pi 会：
+
+1. 获取当前偏航角
+2. 自动从后续偏航测量值中减去该角度
+
+> 💡 VMX-pi 协议和库提供了查询当前使用的偏航偏移值的方法。
+
+### 失败后果
+
+如果 VMX-pi 在启动期间处于运动状态：
+
+- ⏱️ 偏航偏移标定可能**远超 2 秒**
+- ❌ 如果传感器持续运动足够久，偏移量**可能根本不会计算**
+
+> 🔴 **强烈建议**：在初始偏航偏移标定完成之前，**保持 VMX-pi 完全静止**。
+
+---
+
+## 🔄 动态标定（On-the-fly Calibration）
+
+在正常运行期间，VMX-pi 会自动重新校准陀螺仪（例如补偿持续的温度变化）。
+
+这种**动态陀螺仪标定**有助于处理以下情况：
+
+- 传感器在启动期间曾处于运动状态
+- 运行过程中温度发生变化
+
+> 💡 动态标定是**持续进行**的后台过程，无需用户干预。
+
+---
+
+## 📋 标定操作检查清单
+
+为确保 IMU 标定成功，请在每次使用机器人前确认以下事项：
+
+- [ ] 🔲 **放置姿态**：将 VMX-pi 电路板**平行于地球表面**放置
+- [ ] 🔲 **静止状态**：标定期间**不要触碰或移动**机器人
+- [ ] 🔲 **温度适应**：若环境温度变化显著，**重新执行工厂标定**
+- [ ] 🔲 **指示灯确认**：确认「CAL」LED 已正确闪烁
+- [ ] 🔲 **等待完成**：给予足够的静止时间（至少 2 秒）完成偏航偏移标定
+
+---
+
+## ⚠️ 常见问题与故障排除
+
+???+ warning "Q1：为什么我的偏航角（Yaw）不准确或漂移严重？"
+    - **可能原因① —— 启动标定期间传感器发生移动**：VMX-pi 上电后的前几秒会进行陀螺仪零偏初始化，若此时机器人被触碰或移动，将导致错误的偏移量被记录。**解决方案**：重新上电，并在标定期间（约 5~10 秒）确保机器人完全静止且水平放置。
+    - **可能原因② —— 环境温度与工厂标定温度差异显著**：陀螺仪对温度变化极为敏感，若从空调房移至户外高温场地，偏航角可能产生系统性漂移。**解决方案**：在新温度环境下重新执行工厂标定（长按「CAL」按钮 10 秒，重启后保持静止）。
+    - **可能原因③ —— 偏航偏移标定未完成**：初始偏航偏移标定需要启动标定完成后额外约 2 秒的静止期，若在此期间移动，则偏移量可能不被计算，导致后续角度基准错误。**解决方案**：观察「CAL」LED 是否熄灭，确认偏航角稳定后再移动机器人。
+    - **额外排查**：检查 IMU 安装是否牢固，是否存在机械共振；
+
+???+ tip "Q2：启动标定需要多长时间？如何判断是否完成？"
+    - **时间预期**：正常情况下，启动标定（包含加速度计和陀螺仪温度补偿）在 **3~8 秒** 内完成，偏航偏移标定在此基础上额外需要约 **2 秒** 的完全静止。总时长通常不超过 15 秒。
+    - **判断标志**：观察板载「STATUS」LED 灯——启动标定期间会快速闪烁，完成后变为常亮或规律慢闪（具体参考 VMX-pi 硬件手册）。
+    - **若超时**：说明传感器持续运动，标定将自动超时退出，但偏航角精度会下降。此时应重新上电并保持静止。
+
+???+ tip "Q3：每次比赛前都需要重新标定吗？日常使用有什么标定策略？"
+    - **比赛场景建议**：每到达一个新比赛场地（尤其是室内外温差较大时），**强烈建议**在机器人首次上电前执行一次手动工厂标定，以确保 IMU 适应当前环境温度，获取最佳偏航角精度。
+    - **日常训练场景**：若工作环境温度相对稳定（变化 < ±5℃），则无需每次都手动标定，依靠每次上电的自动启动标定即可满足一般导航需求。
+    - **定期维护**：建议每季度或当机器人经历剧烈撞击后，重新执行工厂标定，以消除潜在的机械应力导致的传感器偏移。
+    - **自动化建议**：可在机器人启动脚本中集成温度检测逻辑，当检测到温度变化超过阈值时自动触发重新标定。
+
+???+ tip "Q4：标定时 VMX-pi 必须完全水平吗？为什么？"
+    - **硬性要求**：工厂标定和启动标定期间，VMX-pi **必须平行于地球表面**（即水平放置，允许小角度倾斜，但越水平越好）。这是加速度计标定的必要前提——需要利用重力加速度（1g）作为参考，计算各轴的零偏和比例因子。
+    - **水平的意义**：只有在水平状态下，加速度计 Z 轴才能感知完整的 1g 重力，X/Y 轴感知 0g，从而正确建立基准。若倾斜，则各轴重力分量混叠，标定出来的偏移量将包含姿态角误差，导致后续融合解算的俯仰/横滚角失真。
+---
+
+## 📚 参考资料
+
+- [VMX-pi Gyro/Accelerometer Calibration 官方文档](https://pdocs.kauailabs.com/vmx-pi/guidance/gyroaccelerometer-calibration/)
+- [VMX-pi Best Practices - Calibration](https://pdocs.kauailabs.com/vmx-pi/guidance/best-practices/)
+
+
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
     </div>
-    <h2>本章节内容正在紧张筹备中</h2>
-    <p style="color: #6c757d; font-size: 16px; max-width: 600px; margin: 0 auto;">
-        我们的团队正在夜以继日地为您撰写、测试和排版相关文档，力求为您提供最优质、最准确的内容。<br>
-        请耐心等待，精彩即将呈现！
-    </p>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
 </div>
-
 ---
+🤝 **欢迎参与共建：**
 
-## 📊 当前进度
-
-- [x] 确定文章主题与大纲规划
-- [x] 收集相关技术资料与示例代码
-- [ ] 撰写正文内容与配图制作 `<-- 我们在这里`
-- [ ] 代码示例实际运行测试
-- [ ] 文档校对与 MkDocs 部署发布
-
-<div style="background-color: #e9ecef; border-radius: 5px; padding: 5px; margin: 20px 0;">
-    <div style="background-color: #0056b3; color: white; text-align: center; padding: 5px; border-radius: 5px; width: 40%;">进度：40%</div>
-</div>
-
----
-
-## 🚀 接下来您可以
-
-<div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <a href="../index.md" class="md-button md-button--primary">
-        🏠 返回首页
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/issues/new/choose" class="md-button">
-        💬 提交催更或建议
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/issues/new/choose" class="md-button">
-        提交 Issue
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/compare" class="md-button md-button--primary">
-        提交 PR
-    </a>
-</div>
-
-!!! tip "💡 有话想说？"
-    如果您对当前正在筹备的章节有特别期待的内容，或者遇到了紧急的技术问题，欢迎点击上方按钮在 GitHub 仓库中提交 Issue。您的反馈将帮助我们优先处理最核心的需求！
-
----
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
