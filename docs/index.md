@@ -124,7 +124,7 @@ ROS2 和 Python 基础。
 
 UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航。
 
-- 🚧 [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
+- 📝 [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
 - 🚧 [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
 - 🚧 [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
 - 🚧 [激光定位与导航](07-advanced/04-lidar-localization-navigation.zh.md)
