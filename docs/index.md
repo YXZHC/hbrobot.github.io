@@ -77,8 +77,8 @@ ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
 ROS2 和 Python 基础。
 
 #### **ROS 2 基础**
-- 🚧 [ROS 2 概述](05-basics/ros2/00-ros2-overview.zh.md)
-- 🚧 [话题 (Topic)](05-basics/ros2/01-topic.zh.md)
+- 📝 [ROS 2 概述](05-basics/ros2/00-ros2-overview.zh.md)
+- 📝 [话题 (Topic)](05-basics/ros2/01-topic.zh.md)
 - 🚧 [服务 (Service)](05-basics/ros2/02-service.zh.md)
 - 🚧 [动作 (Action)](05-basics/ros2/03-action.zh.md)
 - 🚧 [启动文件 (Launch)](05-basics/ros2/04-launch.zh.md)
@@ -105,12 +105,12 @@ ROS2 和 Python 基础。
 - ✅ [连续轨迹运动控制](06-applications/02-chassis-control/03-trajectory-control.zh.md)
 
 #### **传感器应用**
-- 📝 [测距传感器原理及应用](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
+- ✅ [测距传感器原理及应用](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
 - 🚧 [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
 - 🚧 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
 
 #### **视觉应用**
-- 📝 [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
+- ✅ [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
 - 🚧 [目标识别基础](06-applications/04-vision-application/02-object-detection-basics.zh.md)
 - 🚧 [深度学习目标检测](06-applications/04-vision-application/03-deep-learning-detection.zh.md)
 
@@ -124,9 +124,9 @@ ROS2 和 Python 基础。
 
 UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航。
 
-- 📝 [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
-- 📝 [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
-- 📝 [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
+- ✅ [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
+- ✅ [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
+- ✅ [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
 - 🚧 [激光定位与导航](07-advanced/04-lidar-localization-navigation.zh.md)
 - 🚧 [COCO数据集采集与标注](07-advanced/05-coco-dataset-collect-label.zh.md)
 - 🚧 [YOLO模型训练与导出](07-advanced/06-yolo-train-export.zh.md)
