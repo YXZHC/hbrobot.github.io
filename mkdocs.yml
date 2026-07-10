@@ -72,10 +72,10 @@ extra:
       link: https://github.com/hbrobot
       name: GitHub
     - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/489593500?spm_id_from=333.1007.0.0
+      link: https://space.bilibili.com
       name: Bilibili
     - icon: fontawesome/solid/envelope
-      link: mailto:contact@huibo-robot.com
+      link: https://github.com/hbrobot
       name: Email
   # 底部状态栏自定义 (可选：显示生成时间或版本)
   status:
