@@ -38,12 +38,22 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
+
   - pymdownx.highlight
+
   - pymdownx.details      # 启用可折叠
-  - pymdownx.superfences  # 允许块内嵌套代码/表格/列表
-  - admonition            # 支持 Material 主题的提示框渲染
+
+  - pymdownx.superfences: # 允许块内嵌套代码/表格/列表
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.tasklist:    # 支持 - [ ] 任务列表复选框渲染
-      clickable_checkbox: true  # 允许点击复选框（可选）
+      clickable_checkbox: true
+
+  - admonition            # 支持 Material 主题的提示框渲染
+
 
   # 引入图标扩展 (用于底部社交链接与顶部图标)
   - pymdownx.emoji:
