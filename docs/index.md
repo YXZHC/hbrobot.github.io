@@ -79,14 +79,22 @@ ROS2 和 Python 基础。
 #### **ROS 2 基础**
 - 📝 [ROS 2 概述](05-basics/ros2/00-ros2-overview.zh.md)
 - 📝 [话题 (Topic)](05-basics/ros2/01-topic.zh.md)
-- 🚧 [服务 (Service)](05-basics/ros2/02-service.zh.md)
-- 🚧 [动作 (Action)](05-basics/ros2/03-action.zh.md)
-- 🚧 [启动文件 (Launch)](05-basics/ros2/04-launch.zh.md)
-- 🚧 [参数 (Parameter)](05-basics/ros2/05-parameter.zh.md)
+- 📝 [服务 (Service)](05-basics/ros2/02-service.zh.md)
+- 📝 [动作 (Action)](05-basics/ros2/03-action.zh.md)
+- 📝 [启动文件 (Launch)](05-basics/ros2/04-launch.zh.md)
+- 📝 [参数 (Parameter)](05-basics/ros2/05-parameter.zh.md)
+- 📝 [ROS 2 工具](05-basics/ros2/06-ros2-tools.zh.md)
 
 #### **Python 基础**
-- 🚧 [Python 基础](05-basics/python/01-python.zh.md)
-
+- 🚧 [Python 概述与环境搭建](05-basics/python/00-python-overview.zh.md)
+- 🚧 [基础语法与核心数据类型](05-basics/python/01-basic-syntax.zh.md)
+- 🚧 [流程控制语句](05-basics/python/02-flow-control.zh.md)
+- 🚧 [复合数据结构](05-basics/python/03-data-structures.zh.md)
+- 🚧 [函数与代码复用](05-basics/python/04-function.zh.md)
+- 🚧 [模块、包与依赖管理](05-basics/python/05-module-package.zh.md)
+- 🚧 [面向对象编程基础](05-basics/python/06-oop-basics.zh.md)
+- 🚧 [异常处理与文件操作](05-basics/python/07-exception-file.zh.md)
+- 🚧 [ROS 2 常用 Python 特性与衔接](05-basics/python/08-ros2-python-bridge.zh.md)
 ---
 
 ### 🤖 [06-控制与应用](06-applications/01-actuator-control/01-user-servo-params.zh.md)
