@@ -355,6 +355,8 @@ auto pub = node->create_publisher<Image>("camera/image", qos);
 ## 9. 参考资源
 
 - [ROS 2 Topics 官方文档](https://docs.ros.org/en/humble/Concepts/Basic/About-Topics.html)  
+- [Writing a simple publisher and subscriber (C++)](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html)
+- [Writing a simple publisher and subscriber (Python)](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 
 
 ---

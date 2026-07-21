@@ -6,6 +6,14 @@
 
 本节教程将深入剖析 `wsc_robotic` SDK 中 `LiftMotor` 与 `RotateMotor` 类的核心参数配置，帮助您理解物理单位（`cm`/`deg`）与底层单位（`tick` 脉冲）之间的换算关系，确保在实际硬件更换或改装时能够正确修改参数。
 
+**📁 配置文件位置：**
+
+```bash
+    ~/wsc_hbrobotv2_python/wsc_robotic/oms/rotate_motor.py
+    ~/wsc_hbrobotv2_python/wsc_robotic/oms/lift_motor.py
+```
+
+
 ## 📌 举升电机参数说明
 
 `LiftMotor` 类主要负责将用户输入的距离（`cm`）转换为电机脉冲（`tick`）。其核心参数定义在类属性中。
