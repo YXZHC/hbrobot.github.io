@@ -83,6 +83,7 @@ ros2 pkg create my_py_pkg --build-type ament_python --dependencies rclpy
 ```
 
 参数说明：
+
 - `--build-type ament_python`：指定为 Python 功能包（C++ 用 `ament_cmake`）
 - `--dependencies rclpy`：声明依赖 ROS 2 Python 客户端库
 
@@ -390,6 +391,7 @@ ros2 run my_py_pkg add_two_ints_client 3 5
 ### 7.1 动作定义
 
 首先需要创建自定义动作接口（`.action` 文件），包含三部分：
+
 - **Goal**：目标（请求）
 - **Result**：最终结果
 - **Feedback**：进度反馈
