@@ -52,6 +52,7 @@ ROS2 环境部署、软件安装、固件升级、调试工具使用教程。
 
 整机结构解析、运动底盘、OMS执行机构、传感器外设（激光雷达、视觉相机、IMU等）。
 
+- 📝 [结构拓扑概况](03-hardware/00-system-overview.zh.md)
 - 🚧 [整机结构概述](03-hardware/01-robot-overview.zh.md)
 - 🚧 [运动底盘](03-hardware/02-motion-chassis.zh.md)
 - 🚧 [OMS 执行机构](03-hardware/03-oms-actuator.zh.md)
@@ -86,15 +87,15 @@ ROS2 和 Python 基础。
 - ✅ [ROS 2 工具](05-basics/ros2/06-ros2-tools.zh.md)
 
 #### **Python 基础**
-- 📝 [Python 概述与环境搭建](05-basics/python/00-python-overview.zh.md)
-- 📝 [基础语法与核心数据类型](05-basics/python/01-basic-syntax.zh.md)
-- 📝 [流程控制语句](05-basics/python/02-flow-control.zh.md)
-- 📝 [复合数据结构](05-basics/python/03-data-structures.zh.md)
-- 📝 [函数与代码复用](05-basics/python/04-function.zh.md)
-- 📝 [模块、包与依赖管理](05-basics/python/05-module-package.zh.md)
-- 📝 [面向对象编程基础](05-basics/python/06-oop-basics.zh.md)
-- 📝 [异常处理与文件操作](05-basics/python/07-exception-file.zh.md)
-- 📝 [ROS 2 常用 Python 特性与衔接](05-basics/python/08-ros2-python-bridge.zh.md)
+- ✅ [Python 概述与环境搭建](05-basics/python/00-python-overview.zh.md)
+- ✅ [基础语法与核心数据类型](05-basics/python/01-basic-syntax.zh.md)
+- ✅ [流程控制语句](05-basics/python/02-flow-control.zh.md)
+- ✅ [复合数据结构](05-basics/python/03-data-structures.zh.md)
+- ✅ [函数与代码复用](05-basics/python/04-function.zh.md)
+- ✅ [模块、包与依赖管理](05-basics/python/05-module-package.zh.md)
+- ✅ [面向对象编程基础](05-basics/python/06-oop-basics.zh.md)
+- ✅ [异常处理与文件操作](05-basics/python/07-exception-file.zh.md)
+- ✅ [ROS 2 常用 Python 特性与衔接](05-basics/python/08-ros2-python-bridge.zh.md)
 ---
 
 ### 🤖 [06-控制与应用](06-applications/01-actuator-control/01-user-servo-params.zh.md)
@@ -114,8 +115,8 @@ ROS2 和 Python 基础。
 
 #### **传感器应用**
 - ✅ [测距传感器原理及应用](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
-- 🚧 [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
-- 🚧 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
+- 📝 [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
+- 📝 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
 
 #### **视觉应用**
 - ✅ [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
@@ -136,7 +137,7 @@ UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航�
 - ✅ [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
 - ✅ [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
 - 🚧 [激光定位与导航](07-advanced/04-lidar-localization-navigation.zh.md)
-- 🚧 [COCO数据集采集与标注](07-advanced/05-coco-dataset-collect-label.zh.md)
+- 📝 [COCO数据集采集与标注](07-advanced/05-coco-dataset-collect-label.zh.md)
 - 🚧 [YOLO模型训练与导出](07-advanced/06-yolo-train-export.zh.md)
 - 🚧 [MNN模型部署与应用](07-advanced/07-mnn-model-deploy.zh.md)
 
@@ -159,7 +160,7 @@ UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航�
 | **文档版本** | V1.0 |
 | **适用机型** | 自主移动机器人 |
 | **更新日期** | 2026.06 |
-| **维护方** | 汇博机器人世界技能大赛移动机器人项目组 |
+| **维护方** | 汇博机器人世界技能大赛自主移动机器人项目组 |
 
 ---
 

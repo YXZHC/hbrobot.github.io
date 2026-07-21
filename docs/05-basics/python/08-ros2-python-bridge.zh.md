@@ -83,6 +83,7 @@ ros2 pkg create my_py_pkg --build-type ament_python --dependencies rclpy
 ```
 
 参数说明：
+
 - `--build-type ament_python`：指定为 Python 功能包（C++ 用 `ament_cmake`）
 - `--dependencies rclpy`：声明依赖 ROS 2 Python 客户端库
 
@@ -390,6 +391,7 @@ ros2 run my_py_pkg add_two_ints_client 3 5
 ### 7.1 动作定义
 
 首先需要创建自定义动作接口（`.action` 文件），包含三部分：
+
 - **Goal**：目标（请求）
 - **Result**：最终结果
 - **Feedback**：进度反馈
@@ -628,3 +630,29 @@ class Controller(Node):
 > [!CAUTION]
 > 注意 Python 版本兼容性：ROS 2 Humble 推荐 Python 3.10，Jazzy 支持 Python 3.10/3.11。
 
+---
+## 👥 贡献者
+本项目离不开每一位提交 PR、提 Issue、优化文档的开发者，由衷致谢！
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; margin-bottom: 20px;">
+    <div style="text-align: center;">
+        <a href="https://github.com/yxzhc">
+            <img src="https://avatars.githubusercontent.com/u/80094007?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="yxzhc">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/yxzhc" style="text-decoration: none;">YXZHC</a>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="https://github.com/hbrobot">
+            <img src="https://avatars.githubusercontent.com/u/292023923?v=4?size=120" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;" alt="HBRobot">
+        </a>
+        <div style="margin-top: 8px; font-weight: 600;">
+            <a href="https://github.com/hbrobot" style="text-decoration: none;">HBRobot</a>
+        </div>
+    </div>
+</div>
+---
+🤝 **欢迎参与共建：**
+
+[:fontawesome-brands-github: 提交 Issue](https://github.com/hbrobot/hbrobot.github.io/issues/new/choose){: .md-button }
+[:octicons-git-pull-request-24: 提交 PR](https://github.com/hbrobot/hbrobot.github.io/compare){: .md-button .md-button--primary }
