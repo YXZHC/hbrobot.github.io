@@ -13,6 +13,20 @@
 
 ---
 
+## 📊 当前进度
+
+- [x] 确定文章主题与大纲规划 `<-- 我们在这里`
+- [ ] 收集相关技术资料与示例代码
+- [ ] 撰写正文内容与配图制作 
+- [ ] 代码示例实际运行测试
+- [ ] 文档校对与 MkDocs 部署发布
+
+<div style="background-color: #e9ecef; border-radius: 5px; padding: 5px; margin: 20px 0;">
+    <div style="background-color: #0056b3; color: white; text-align: center; padding: 5px; border-radius: 5px; width: 20%;">进度：20%</div>
+</div>
+
+---
+
 ## 🚀 接下来您可以
 
 <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">

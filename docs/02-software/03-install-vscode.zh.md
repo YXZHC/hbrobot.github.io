@@ -1,5 +1,5 @@
 # Visual Studio Code 安装
----
+
 ### 下载 Visual Studio Code
 
 我们需要安装Visual Studio Code软件，因为他能够提高我们的开发效率。

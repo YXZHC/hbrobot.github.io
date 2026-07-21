@@ -112,6 +112,7 @@ nav:
     - 安装与配置 Git: 02-software/08-install-git.zh.md
 
   - 硬件与结构:
+    - 结构拓扑概况: 03-hardware/00-system-overview.zh.md
     - 整机结构概述: 03-hardware/01-robot-overview.zh.md
     - 运动底盘: 03-hardware/02-motion-chassis.zh.md
     - OMS 执行机构: 03-hardware/03-oms-actuator.zh.md

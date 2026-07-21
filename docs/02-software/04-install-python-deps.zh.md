@@ -1,5 +1,5 @@
 # Python 依赖库与 pip 使用指南
----
+
 `pip` 是 Python 官方包管理工具，负责 Python 第三方包的**查找、下载、安装、卸载**。目前从 Python 官网下载的新版安装包，均已默认内置 `pip`。
 
 pip 官网：https://pypi.org/project/pip/

@@ -1,5 +1,5 @@
 # Ubuntu 22.04 桌面版安装 
----
+
 本教程适用于在已有 Windows 11 的电脑上安装 **Ubuntu 22.04 LTS（Jammy Jellyfish）桌面版**，用于 ROS 2 教学与实验环境。
 
 > [!NOTE]
