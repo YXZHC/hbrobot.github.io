@@ -129,18 +129,26 @@ ROS2 和 Python 基础。
 
 ---
 
-### 🚀 [07-进阶内容](07-advanced/01-udev-rule.zh.md)
+### 🚀 [07-进阶内容](07-advanced/yolo/01-image-collection.zh.md)
 
 UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航。
 
-- ✅ [UDEV 规则配置](07-advanced/01-udev-rule.zh.md)
-- ✅ [激光雷达 SDK 安装](07-advanced/02-lidar-sdk-install.zh.md)
-- ✅ [激光雷达 ROS2 驱动](07-advanced/03-lidar-ros2-driver.zh.md)
-- 🚧 [激光定位与导航](07-advanced/04-lidar-localization-navigation.zh.md)
-- 📝 [COCO数据集采集与标注](07-advanced/05-coco-dataset-collect-label.zh.md)
-- 🚧 [YOLO模型训练与导出](07-advanced/06-yolo-train-export.zh.md)
-- 🚧 [MNN模型部署与应用](07-advanced/07-mnn-model-deploy.zh.md)
+#### **Ultralytics YOLO**
+- 📝 [数据集图像采集](07-advanced/yolo/01-image-collection.zh.md)
+- 🚧 [数据集标注(COCO)](07-advanced/yolo/02-dataset-annotation-coco.zh.md)
+- 🚧 [数据集转换(COCO)](07-advanced/yolo/03-dataset-conversion-coco.zh.md)
+- 🚧 [划分训练集与测试集](07-advanced/yolo/04-dataset-split.zh.md)
+- 🚧 [YOLO模型训练与导出](07-advanced/yolo/05-model-training-export.zh.md)
+- 🚧 [MNN模型部署与应用](07-advanced/yolo/06-model-deployment-mnn.zh.md)
 
+#### **LiDAR SDK**
+- ✅ [激光雷达 SDK 安装](07-advanced/lidar/01-lidar-sdk-install.zh.md)
+- ✅ [激光雷达 ROS2 驱动](07-advanced/lidar/02-lidar-ros2-driver.zh.md)
+- 🚧 [激光定位与导航](07-advanced/lidar/03-lidar-localization-navigation.zh.md)
+
+#### **System 配置**
+- ✅ [UDEV 规则配置](07-advanced/system/01-udev-rule.zh.md)
+- 🚧 [ROS2 DDS配置](07-advanced/system/02-ros2-dds-config.zh.md)
 
 ---
 
