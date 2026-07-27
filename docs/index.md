@@ -115,8 +115,8 @@ ROS2 和 Python 基础。
 
 #### **传感器应用**
 - ✅ [测距传感器原理及应用](06-applications/03-sensor-application/01-ranging-sensors.zh.md)
-- 📝 [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
-- 📝 [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
+- ✅ [IMU 数据读取与应用](06-applications/03-sensor-application/02-imu-data-usage.zh.md)
+- ✅ [激光雷达数据处理](06-applications/03-sensor-application/03-lidar-data-processing.zh.md)
 
 #### **视觉应用**
 - ✅ [图像采集](06-applications/04-vision-application/01-camera-capture.zh.md)
@@ -134,7 +134,7 @@ ROS2 和 Python 基础。
 UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航。
 
 #### **Ultralytics YOLO**
-- 📝 [数据集图像采集](07-advanced/yolo/01-image-collection.zh.md)
+- ✅ [数据集图像采集](07-advanced/yolo/01-image-collection.zh.md)
 - 🚧 [数据集标注(COCO)](07-advanced/yolo/02-dataset-annotation-coco.zh.md)
 - 🚧 [数据集转换(COCO)](07-advanced/yolo/03-dataset-conversion-coco.zh.md)
 - 🚧 [划分训练集与测试集](07-advanced/yolo/04-dataset-split.zh.md)
