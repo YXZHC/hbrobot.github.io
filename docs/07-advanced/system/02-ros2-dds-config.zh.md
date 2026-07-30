@@ -1,50 +1,280 @@
-# 🏗️ 正在紧张筹备中
+# ROS2 DDS 配置（00-ros2-dds-config.zh.md）
 
-<div style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
-    <div style="font-size: 80px; line-height: 1.2; margin-bottom: 20px;">
-        ⚙️🚧⏳
-    </div>
-    <h2>本章节内容正在紧张筹备中</h2>
-    <p style="color: #6c757d; font-size: 16px; max-width: 600px; margin: 0 auto;">
-        我们的团队正在夜以继日地为您撰写、测试和排版相关文档，力求为您提供最优质、最准确的内容。<br>
-        请耐心等待，精彩即将呈现！
-    </p>
-</div>
+> ROS2 Humble 自主移动机器人系列教程
 
 ---
 
-## 📊 当前进度
+# ROS2 DDS 配置
 
-- [x] 确定文章主题与大纲规划 `<-- 我们在这里`
-- [ ] 收集相关技术资料与示例代码
-- [ ] 撰写正文内容与配图制作 
-- [ ] 代码示例实际运行测试
-- [ ] 文档校对与 MkDocs 部署发布
+ROS2（Robot Operating System 2）采用 **DDS（Data Distribution Service）** 作为底层通信中间件，不同的 DDS 实现具有不同的性能特点。ROS2 Humble 默认使用 **eProsima Fast DDS**，同时官方支持 **Cyclone DDS、RTI Connext DDS、GurumDDS** 等实现。
 
-<div style="background-color: #e9ecef; border-radius: 5px; padding: 5px; margin: 20px 0;">
-    <div style="background-color: #0056b3; color: white; text-align: center; padding: 5px; border-radius: 5px; width: 20%;">进度：20%</div>
-</div>
+本文介绍如何安装、切换和验证不同 DDS，实现根据实际应用场景选择合适的通信中间件。
 
 ---
 
-## 🚀 接下来您可以
+## DDS 简介
 
-<div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <a href="../../" class="md-button md-button--primary">
-        🏠 返回首页
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/issues/new/choose" class="md-button">
-        💬 提交催更或建议
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/issues/new/choose" class="md-button">
-        提交 Issue
-    </a>
-    <a href="https://github.com/hbrobot/hbrobot.github.io/compare" class="md-button md-button--primary">
-        提交 PR
-    </a>
-</div>
+DDS（Data Distribution Service）是一种发布/订阅（Publish-Subscribe）通信中间件，负责 ROS2 节点之间的数据发现、传输和管理。
 
-!!! tip "💡 有话想说？"
-    如果您对当前正在筹备的章节有特别期待的内容，或者遇到了紧急的技术问题，欢迎点击上方按钮在 GitHub 仓库中提交 Issue。您的反馈将帮助我们优先处理最核心的需求！
+ROS2 的通信架构如下：
+
+```mermaid
+graph LR
+A[ROS2 Node] --> B[RCL]
+B --> C[RMW]
+C --> D[DDS]
+D --> E[UDP/TCP]
+```
+
+其中：
+
+* **RCL（ROS Client Library）**：ROS2 客户端接口
+* **RMW（ROS Middleware）**：ROS2 中间件抽象层
+* **DDS**：真正负责网络通信
+
+ROS2 可以通过更换 RMW 实现切换不同 DDS，而无需修改应用程序代码。
 
 ---
+
+## 查看当前 DDS
+
+查看当前安装的 RMW：
+
+```bash
+printenv | grep RMW
+```
+
+或者：
+
+```bash
+echo $RMW_IMPLEMENTATION
+```
+
+如果没有任何输出，则使用系统默认 DDS。
+
+查看当前系统支持的 DDS：
+
+```bash
+ros2 doctor --report
+```
+
+---
+
+## ROS2 Humble 默认 DDS
+
+Ubuntu 安装的 ROS2 Humble 默认使用：
+
+```text
+rmw_fastrtps_cpp
+```
+
+对应：
+
+* eProsima Fast DDS
+
+---
+
+## 安装 Cyclone DDS
+
+官方推荐命令：
+
+```bash
+sudo apt update
+
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+```
+
+安装完成后，切换 DDS：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
+
+永久生效：
+
+```bash
+echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
+
+source ~/.bashrc
+```
+
+---
+
+## 安装 Fast DDS
+
+如果已经安装 ROS2 Humble，一般已经包含 Fast DDS。
+
+如需重新安装：
+
+```bash
+sudo apt install ros-humble-rmw-fastrtps-cpp
+```
+
+切换：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+
+---
+
+## 安装 RTI Connext DDS
+
+> [!WARNING]
+> RTI Connext DDS 并非完全开源，需要单独申请或购买授权。
+
+下载并安装 RTI Connext DDS 后，再安装 ROS2 对应 RMW：
+
+```bash
+sudo apt install ros-humble-rmw-connextdds
+```
+
+切换：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_connextdds
+```
+
+---
+
+## 安装 GurumDDS
+
+> [!WARNING]
+> GurumDDS 为商业产品，需要获得官方授权。
+
+安装 ROS2 RMW：
+
+```bash
+sudo apt install ros-humble-rmw-gurumdds-cpp
+```
+
+切换：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_gurumdds_cpp
+```
+
+---
+
+## 查看已安装 DDS
+
+查看系统中已安装的 RMW：
+
+```bash
+apt list --installed | grep rmw
+```
+
+例如：
+
+```text
+ros-humble-rmw-fastrtps-cpp
+ros-humble-rmw-cyclonedds-cpp
+ros-humble-rmw-connextdds
+ros-humble-rmw-gurumdds-cpp
+```
+
+---
+
+## 验证 DDS 是否切换成功
+
+打开终端 A：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+ros2 run demo_nodes_cpp talker
+```
+
+打开终端 B：
+
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+ros2 run demo_nodes_cpp listener
+```
+
+如果能够正常收到消息：
+
+```text
+I heard: Hello World
+```
+
+说明 DDS 已切换成功。
+
+> [!CAUTION]
+> Talker 和 Listener 必须使用相同的 DDS 实现，否则无法正常通信。
+
+---
+
+## 查看当前使用的 RMW
+
+使用以下命令查看当前 RMW：
+
+```bash
+echo $RMW_IMPLEMENTATION
+```
+
+输出示例：
+
+```text
+rmw_cyclonedds_cpp
+```
+
+或者：
+
+```text
+rmw_fastrtps_cpp
+```
+
+---
+
+## 常用 DDS 对比
+
+| DDS             | 开源 | 默认支持 | 推荐场景      |
+| --------------- | -- | ---- | --------- |
+| Fast DDS        | ✅  | ⭐ 默认 | 通用机器人开发   |
+| Cyclone DDS     | ✅  | 官方推荐 | 多机器人、无线网络 |
+| RTI Connext DDS | ❌  | 支持   | 工业级应用     |
+| GurumDDS        | ❌  | 支持   | 商业机器人     |
+
+---
+
+??? example "切换到 Cyclone DDS"
+
+```bash
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+ros2 run demo_nodes_cpp talker
+```
+
+---
+
+???+ tip "推荐选择"
+
+对于大多数 ROS2 Humble 自主移动机器人项目，建议：
+
+* **开发环境**：Fast DDS（默认即可）
+* **多机器人通信**：Cyclone DDS
+* **工业项目**：RTI Connext DDS
+* **商业闭源产品**：GurumDDS
+
+---
+
+???+ warning "注意事项"
+
+* 所有通信节点必须使用相同的 DDS 实现。
+* 修改 `RMW_IMPLEMENTATION` 后需要重新打开终端或执行 `source ~/.bashrc`。
+* Docker 容器中的 DDS 配置应与宿主机保持一致，避免通信失败。
+
+---
+
+## 参考资料
+
+* ROS2 Humble DDS Implementations
+* Working with Eclipse Cyclone DDS
+* Working with eProsima Fast DDS
+* Working with RTI Connext DDS
+* Working with GurumDDS
+

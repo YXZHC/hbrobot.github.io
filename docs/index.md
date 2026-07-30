@@ -148,9 +148,24 @@ UDEV规则配置、激光雷达SDK与驱动安装、激光定位与自主导航�
 
 #### **System 配置**
 - ✅ [UDEV 规则配置](07-advanced/system/01-udev-rule.zh.md)
-- 🚧 [ROS2 DDS配置](07-advanced/system/02-ros2-dds-config.zh.md)
+- 📝 [ROS2 DDS配置](07-advanced/system/02-ros2-dds-config.zh.md)
 
 ---
+
+### 🛠️ FAQ & QA
+
+常见问题排查、环境故障解决与报错速查表。
+
+#### **常见问题**
+- 📝 [常见问题总览](08-faq/00-faq-overview.zh.md)
+- 🚧 [环境与安装问题](08-faq/01-env-install-qa.zh.md)
+- 🚧 [硬件与连接问题](08-faq/02-hardware-connection-qa.zh.md)
+- 🚧 [ROS 2 与通信问题](08-faq/03-ros2-communication-qa.zh.md)
+- 🚧 [运动控制问题](08-faq/04-motion-control-qa.zh.md)
+- 🚧 [视觉与AI问题](08-faq/05-vision-ai-qa.zh.md)
+
+#### **故障排查**
+- 🚧 [报错排查速查表](08-faq/06-error-troubleshooting.zh.md)
 
 ## 📚 使用建议
 
